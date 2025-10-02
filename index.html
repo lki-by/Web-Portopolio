@@ -1,760 +1,598 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio - Alby Nizam | International Full Stack Developer</title>
+    <title>Portfolio - Alby Nizam</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <style>
-      html {
-        scroll-behavior: smooth;
-      }
+        html {
+            scroll-behavior: smooth;
+        }
     </style>
-  </head>
-  <body class="bg-gray-900 text-gray-100">
-    <div
-      id="preloader"
-      class="fixed inset-0 bg-gray-900 flex items-center justify-center z-50"
-    >
-      <div
-        class="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-yellow-400"
-      ></div>
+</head>
+
+<body class="bg-gray-900 text-gray-100">
+    <div id="preloader" class="fixed inset-0 bg-gray-900 flex items-center justify-center z-50">
+        <div class="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-yellow-400"></div>
     </div>
-    <header
-      class="bg-gradient-to-tr from-gray-900 via-gray-800 to-gray-900 fixed w-full z-20 shadow-2xl"
-    >
-      <div
-        class="container mx-auto flex justify-between items-center px-6 py-4"
-      >
-        <h1 class="text-yellow-400 text-2xl font-bold">
-          MyPortfolio <i class="fas fa-globe text-yellow-400 ml-2"></i>
-        </h1>
-        <nav class="hidden md:block">
-          <ul class="flex space-x-6">
-            <li><a href="#home" class="hover:text-yellow-400">Home</a></li>
-            <li><a href="#about" class="hover:text-yellow-400">About</a></li>
-            <li><a href="#skills" class="hover:text-yellow-400">Skills</a></li>
-            <li>
-              <a href="#projects" class="hover:text-yellow-400">Projects</a>
-            </li>
-            <li>
-              <a href="#contact" class="hover:text-yellow-400">Contact</a>
-            </li>
-          </ul>
-        </nav>
-
-        <button id="menu-btn" class="md:hidden text-yellow-400 text-2xl">
-          <i class="fas fa-bars"></i>
-        </button>
-      </div>
-
-      <div id="menu" class="hidden md:hidden bg-gray-700">
-        <ul class="flex flex-col p-4 space-y-2 text-center">
-          <li><a href="#home" class="block hover:text-yellow-400">Home</a></li>
-          <li>
-            <a href="#about" class="block hover:text-yellow-400">About</a>
-          </li>
-          <li>
-            <a href="#skills" class="block hover:text-yellow-400">Skills</a>
-          </li>
-          <li>
-            <a href="#projects" class="block hover:text-yellow-400">Projects</a>
-          </li>
-          <li>
-            <a href="#contact" class="block hover:text-yellow-400">Contact</a>
-          </li>
-        </ul>
-      </div>
+    <header class="bg-gradient-to-tr from-gray-900 via-gray-800 to-gray-900 fixed w-full z-20 shadow-2xl">
+        <div class="container mx-auto flex justify-between items-center px-6 py-4">
+            <h1 class="text-yellow-400 text-2xl font-bold">MyPortfolio</h1>
+            <nav class="hidden md:flex items-center space-x-6">
+                <a href="#home" class="hover:text-yellow-400 font-semibold transition duration-200">Home</a>
+                <a href="#about" class="hover:text-yellow-400 font-semibold transition duration-200">About</a>
+                <a href="#skills" class="hover:text-yellow-400 font-semibold transition duration-200">Skills</a>
+                <a href="#projects" class="hover:text-yellow-400 font-semibold transition duration-200">Projects</a>
+                <a href="#contact" class="hover:text-yellow-400 font-semibold transition duration-200">Contact</a>
+            </nav>
+            <button id="menu-btn"
+                class="md:hidden text-yellow-400 text-2xl focus:outline-none transition duration-200 hover:scale-110">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        <div id="menu" class="hidden md:hidden bg-gray-800 w-full absolute left-0 top-full shadow-xl">
+            <ul class="flex flex-col p-4 space-y-2 text-center">
+                <li>
+                    <a href="#home"
+                        class="block py-2 px-4 rounded hover:bg-yellow-400 hover:text-black font-semibold transition duration-200">Home</a>
+                </li>
+                <li>
+                    <a href="#about"
+                        class="block py-2 px-4 rounded hover:bg-yellow-400 hover:text-black font-semibold transition duration-200">About</a>
+                </li>
+                <li>
+                    <a href="#skills"
+                        class="block py-2 px-4 rounded hover:bg-yellow-400 hover:text-black font-semibold transition duration-200">Skills</a>
+                </li>
+                <li>
+                    <a href="#projects"
+                        class="block py-2 px-4 rounded hover:bg-yellow-400 hover:text-black font-semibold transition duration-200">Projects</a>
+                </li>
+                <li>
+                    <a href="#contact"
+                        class="block py-2 px-4 rounded hover:bg-yellow-400 hover:text-black font-semibold transition duration-200">Contact</a>
+                </li>
+            </ul>
+        </div>
     </header>
-    <div
-      id="progress-bar"
-      class="fixed top-0 left-0 w-0 h-1 bg-yellow-400 z-50"
-    ></div>
+    <div id="progress-bar" class="fixed top-0 left-0 w-0 h-1 bg-yellow-400 z-50"></div>
 
-    <section
-      id="home"
-      class="relative w-full h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 flex items-center justify-center"
-      data-aos="fade-in"
-    >
-      <div class="absolute top-0 left-0 w-full h-full pointer-events-none z-0">
-        <!-- Decorative circles -->
-        <div
-          class="absolute top-10 left-10 w-32 h-32 bg-yellow-400 opacity-10 rounded-full blur-2xl"
-        ></div>
-        <div
-          class="absolute bottom-20 right-20 w-40 h-40 bg-pink-400 opacity-10 rounded-full blur-2xl"
-        ></div>
-        <div
-          class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-24 h-24 bg-teal-400 opacity-10 rounded-full blur-2xl"
-        ></div>
-      </div>
-      <div
-        class="relative z-10 flex flex-col md:flex-row items-center justify-center w-full max-w-4xl mx-auto px-6 md:px-0"
-      >
-        <div
-          class="group flex-shrink-0 mb-8 md:mb-0 md:mr-12 transition-transform duration-300 hover:scale-105"
-        >
-          <div
-            id="avatar-home"
-            class="w-40 h-40 rounded-full border-4 border-yellow-400 overflow-hidden shadow-2xl transition-all duration-300 transition-transform duration-100 ease-out hover:shadow-yellow-400 hover:scale-110 cursor-pointer"
-          >
-            <img
-              src="images/alby.JPG"
-              alt="Profile"
-              class="w-full h-full object-cover object-top"
-            />
-          </div>
+    <section id="home"
+        class="relative w-full h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 flex items-center justify-center"
+        data-aos="fade-in">
+        <div class="absolute top-0 left-0 w-full h-full pointer-events-none z-0">
+            <!-- Decorative circles -->
+            <div class="absolute top-10 left-10 w-32 h-32 bg-yellow-400 opacity-10 rounded-full blur-2xl"></div>
+            <div class="absolute bottom-20 right-20 w-40 h-40 bg-pink-400 opacity-10 rounded-full blur-2xl"></div>
+            <div
+                class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-24 h-24 bg-teal-400 opacity-10 rounded-full blur-2xl">
+            </div>
         </div>
         <div
-          class="flex flex-col items-center md:items-start text-center md:text-left"
-        >
-          <h1
-            class="text-4xl md:text-6xl font-extrabold text-white leading-tight mb-2"
-          >
-            ALBY <span class="text-yellow-400">NIZAM</span>
-          </h1>
-          <p class="text-xl md:text-3xl text-gray-200 mb-4 mt-2 min-h-[40px]">
-            <span id="typing-role"></span>
-            <span class="blinking-cursor text-yellow-400 font-bold"></span>
-          </p>
-          <div
-            class="space-x-4 transform hover:scale-105 duration-200 flex flex-wrap justify-center md:justify-start"
-          >
-            <a
-              href="#resume"
-              class="bg-white text-black px-6 py-3 rounded-full font-semibold shadow-lg hover:bg-yellow-400 transition duration-300 hover:scale-105 ripple"
-            >
-              Resume
-            </a>
-            <a
-              href="#portfolio"
-              class="border border-white text-white px-6 py-3 rounded-full hover:bg-yellow-400 hover:text-black transition duration-300 shadow-lg hover:scale-105 ripple"
-            >
-              Portfolio
-            </a>
-          </div>
+            class="relative z-10 flex flex-col md:flex-row items-center justify-center w-full max-w-4xl mx-auto px-6 md:px-0">
+            <div class="group flex-shrink-0 mb-8 md:mb-0 md:mr-12 transition-transform duration-300 hover:scale-105">
+                <div id="avatar-home"
+                    class="w-40 h-40 rounded-full border-4 border-yellow-400 overflow-hidden shadow-2xl transition-all duration-300 transition-transform duration-100 ease-out hover:shadow-yellow-400 hover:scale-110 cursor-pointer">
+                    <img src="images/alby.JPG" alt="Profile" class="w-full h-full object-cover object-top" />
+                </div>
+            </div>
+            <div class="flex flex-col items-center md:items-start text-center md:text-left">
+                <h1 class="text-4xl md:text-6xl font-extrabold text-white leading-tight mb-2">
+                    ALBY <span class="text-yellow-400">NIZAM</span>
+                </h1>
+                <p class="text-xl md:text-3xl text-gray-200 mb-4 mt-2 min-h-[40px]">
+                    <span id="typing-role"></span>
+                    <span class="blinking-cursor text-yellow-400 font-bold"></span>
+                </p>
+                <div
+                    class="space-x-4 transform hover:scale-105 duration-200 flex flex-wrap justify-center md:justify-start">
+                    <a href="#resume"
+                        class="bg-white text-black px-6 py-3 rounded-full font-semibold shadow-lg hover:bg-yellow-400 transition duration-300 hover:scale-105 ripple">
+                        Resume
+                    </a>
+                    <a href="#portfolio"
+                        class="border border-white text-white px-6 py-3 rounded-full hover:bg-yellow-400 hover:text-black transition duration-300 shadow-lg hover:scale-105 ripple">
+                        Portfolio
+                    </a>
+                </div>
+            </div>
         </div>
-      </div>
     </section>
 
     <section id="about" class="pt-32 pb-16 px-6 bg-gray-900" data-aos="fade-up">
-      <div
-        class="container mx-auto flex flex-col md:flex-row items-center md:space-x-10"
-      >
-        <div
-          class="w-48 h-48 mx-auto rounded-full border-4 border-yellow-400 overflow-hidden shadow-2xl transform duration-150 hover:scale-105 hover:shadow-md hover:shadow-yellow-400"
-        >
-          <img
-            src="images/profile.jpg"
-            alt="Profile"
-            class="w-full h-full object-cover object-top transform transition duration-300 hover:scale-110"
-          />
-        </div>
-        <div class="md:w-2/3 text-center md:text-left">
-          <h2 class="text-4xl font-bold text-yellow-400 mb-4">About Me</h2>
-          <p class="text-gray-300 text-lg leading-relaxed mb-6">
-            Hello! I’m <span class="text-white font-semibold">Alby Nizam</span>,
-            a passionate
-            <span class="text-yellow-400">Full Stack Developer</span>
-            who loves turning ideas into functional and beautiful web
-            experiences. I enjoy working on both frontend and backend, making
-            sure every project is fast, secure, and user-friendly.
-          </p>
+        <div class="container mx-auto flex flex-col md:flex-row items-center md:space-x-10">
+            <div
+                class="w-48 h-48 mx-auto rounded-full border-4 border-yellow-400 overflow-hidden shadow-2xl transform duration-150 hover:scale-105 hover:shadow-md hover:shadow-yellow-400">
+                <img src="images/profile.jpg" alt="Profile"
+                    class="w-full h-full object-cover object-top transform transition duration-300 hover:scale-110" />
+            </div>
+            <div class="md:w-2/3 text-center md:text-left">
+                <h2 class="text-4xl font-bold text-yellow-400 mb-4">About Me</h2>
+                <p class="text-gray-300 text-lg leading-relaxed mb-6">
+                    Hello! I’m <span class="text-white font-semibold">Alby Nizam</span>,
+                    a passionate
+                    <span class="text-yellow-400">Full Stack Developer</span>
+                    who loves turning ideas into functional and beautiful web
+                    experiences. I enjoy working on both frontend and backend, making
+                    sure every project is fast, secure, and user-friendly.
+                </p>
 
-          <p class="text-gray-300 text-lg leading-relaxed mb-6">
-            Skilled in
-            <span class="text-yellow-400"
-              >JavaScript, PHP, Dart, Tailwind CSS</span
-            >
-            and more, I always strive to build clean, scalable, and creative
-            solutions. My goal is to keep learning, explore new technologies,
-            and create digital products that bring value to others.
-          </p>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-gray-200">
-            <div
-              class="p-4 bg-gray-800 rounded-lg shadow-md transform transition duration-75 hover:scale-105 hover:shadow-lg hover:shadow-yellow-500"
-              data-aos="flip-left"
-            >
-              <h4 class="text-yellow-400 font-bold text-xl">Experience</h4>
-              <p>3+ Years in Web and Apps Developer</p>
+                <p class="text-gray-300 text-lg leading-relaxed mb-6">
+                    Skilled in
+                    <span class="text-yellow-400">JavaScript, PHP, Dart, Tailwind CSS</span>
+                    and more, I always strive to build clean, scalable, and creative
+                    solutions. My goal is to keep learning, explore new technologies,
+                    and create digital products that bring value to others.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-gray-200">
+                    <div class="p-4 bg-gray-800 rounded-lg shadow-md transform transition duration-75 hover:scale-105 hover:shadow-lg hover:shadow-yellow-500"
+                        data-aos="flip-left">
+                        <h4 class="text-yellow-400 font-bold text-xl">Experience</h4>
+                        <p>3+ Years in Web and Apps Developer</p>
+                    </div>
+                    <div class="p-4 bg-gray-800 rounded-lg shadow-md transform hover:scale-105 hover:shadow-lg hover:shadow-yellow-500"
+                        data-aos="flip-left" data-aos-delay="100">
+                        <h4 class="text-yellow-400 font-bold text-xl">Location</h4>
+                        <p>Lampung, Indonesia</p>
+                    </div>
+                    <div class="p-4 bg-gray-800 rounded-lg shadow-md transform hover:scale-105 hover:shadow-lg hover:shadow-yellow-500"
+                        data-aos="flip-left" data-aos-delay="200">
+                        <h4 class="text-yellow-400 font-bold text-xl">Email</h4>
+                        <p>albynizam33@gmail.com</p>
+                    </div>
+                    <div class="p-4 bg-gray-800 rounded-lg shadow-md transform hover:scale-105 hover:shadow-lg hover:shadow-yellow-500"
+                        data-aos="flip-left" data-aos-delay="300">
+                        <h4 class="text-yellow-400 font-bold text-xl">Phone</h4>
+                        <p>+62 858-3823-9904</p>
+                    </div>
+                </div>
             </div>
-            <div
-              class="p-4 bg-gray-800 rounded-lg shadow-md transform hover:scale-105 hover:shadow-lg hover:shadow-yellow-500"
-              data-aos="flip-left"
-              data-aos-delay="100"
-            >
-              <h4 class="text-yellow-400 font-bold text-xl">Location</h4>
-              <p>Lampung, Indonesia</p>
-            </div>
-            <div
-              class="p-4 bg-gray-800 rounded-lg shadow-md transform hover:scale-105 hover:shadow-lg hover:shadow-yellow-500"
-              data-aos="flip-left"
-              data-aos-delay="200"
-            >
-              <h4 class="text-yellow-400 font-bold text-xl">Email</h4>
-              <p>albynizam33@gmail.com</p>
-            </div>
-            <div
-              class="p-4 bg-gray-800 rounded-lg shadow-md transform hover:scale-105 hover:shadow-lg hover:shadow-yellow-500"
-              data-aos="flip-left"
-              data-aos-delay="300"
-            >
-              <h4 class="text-yellow-400 font-bold text-xl">Phone</h4>
-              <p>+62 858-3823-9904</p>
-            </div>
-          </div>
         </div>
-      </div>
     </section>
 
     <section id="skills" class="py-16 bg-gray-800" data-aos="fade-up">
-      <div class="container mx-auto px-6">
-        <h2 class="text-3xl font-bold text-center mb-10 text-yellow-400">
-          My Skills
-        </h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div
-            class="p-4 bg-gray-700 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
-            data-aos="fade-right"
-          >
-            <div class="flex items-center justify-between mb-2">
-              <div
-                class="flex items-center space-x-4 transform hover:scale-105 duration-200"
-              >
-                <i class="fab fa-html5 text-4xl text-orange-500"></i>
-                <span class="font-semibold text-lg">HTML</span>
-              </div>
-              <span class="text-sm text-gray-300">90%</span>
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-10 text-yellow-400">
+                My Skills
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="p-4 bg-gray-700 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
+                    data-aos="fade-right">
+                    <div class="flex items-center justify-between mb-2">
+                        <div class="flex items-center space-x-4 transform hover:scale-110 duration-200">
+                            <i class="fab fa-html5 text-4xl text-orange-500"></i>
+                            <span class="font-semibold text-lg">HTML</span>
+                        </div>
+                        <span class="text-sm text-gray-300">90%</span>
+                    </div>
+                    <div class="w-full bg-gray-600 rounded-full h-3 overflow-hidden">
+                        <div class="bg-gradient-to-r from-yellow-400 to-yellow-500 h-full rounded-full transition-all duration-1000 ease-out hover:from-yellow-300 hover:to-yellow-400"
+                            style="width: 90%"></div>
+                    </div>
+                </div>
+                <div class="p-4 bg-gray-700 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
+                    data-aos="fade-right" data-aos-delay="100">
+                    <div class="flex items-center justify-between mb-2">
+                        <div class="flex items-center space-x-4 transform hover:scale-110 duration-200">
+                            <i class="fab fa-php text-4xl text-indigo-400"></i>
+                            <span class="font-semibold text-lg">PHP</span>
+                        </div>
+                        <span class="text-sm text-gray-300">90%</span>
+                    </div>
+                    <div class="w-full bg-gray-600 rounded-full h-3 overflow-hidden">
+                        <div class="bg-gradient-to-r from-yellow-400 to-yellow-500 h-full rounded-full transition-all duration-1000 ease-out hover:from-yellow-300 hover:to-yellow-400"
+                            style="width: 90%"></div>
+                    </div>
+                </div>
+                <div class="p-4 bg-gray-700 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
+                    data-aos="fade-right" data-aos-delay="200">
+                    <div class="flex items-center justify-between mb-2">
+                        <div class="flex items-center space-x-4 transform hover:scale-110 duration-200">
+                            <i class="fab fa-laravel text-4xl text-red-500"></i>
+                            <span class="font-semibold text-lg">Laravel</span>
+                        </div>
+                        <span class="text-sm text-gray-300">80%</span>
+                    </div>
+                    <div class="w-full bg-gray-600 rounded-full h-3 overflow-hidden">
+                        <div class="bg-gradient-to-r from-yellow-400 to-yellow-500 h-full rounded-full transition-all duration-1000 ease-out hover:from-yellow-300 hover:to-yellow-400"
+                            style="width: 80%"></div>
+                    </div>
+                </div>
+                <div class="p-4 bg-gray-700 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
+                    data-aos="fade-right" data-aos-delay="300">
+                    <div class="flex items-center justify-between mb-2">
+                        <div class="flex items-center space-x-4 transform hover:scale-110 duration-200">
+                            <i class="fab fa-js text-4xl text-yellow-300"></i>
+                            <span class="font-semibold text-lg">JavaScript</span>
+                        </div>
+                        <span class="text-sm text-gray-300">50%</span>
+                    </div>
+                    <div class="w-full bg-gray-600 rounded-full h-3 overflow-hidden">
+                        <div class="bg-gradient-to-r from-yellow-400 to-yellow-500 h-full rounded-full transition-all duration-1000 ease-out hover:from-yellow-300 hover:to-yellow-400"
+                            style="width: 50%"></div>
+                    </div>
+                </div>
+                <div class="p-4 bg-gray-700 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
+                    data-aos="fade-right" data-aos-delay="400">
+                    <div class="flex items-center justify-between mb-2">
+                        <div class="flex items-center space-x-4 transform hover:scale-110 duration-200">
+                            <i class="fab fa-css3-alt text-4xl text-blue-400"></i>
+                            <span class="font-semibold text-lg">CSS</span>
+                        </div>
+                        <span class="text-sm text-gray-300">70%</span>
+                    </div>
+                    <div class="w-full bg-gray-600 rounded-full h-3 overflow-hidden">
+                        <div class="bg-gradient-to-r from-yellow-400 to-yellow-500 h-full rounded-full transition-all duration-1000 ease-out hover:from-yellow-300 hover:to-yellow-400"
+                            style="width: 70%"></div>
+                    </div>
+                </div>
+                <div class="p-4 bg-gray-700 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
+                    data-aos="fade-right" data-aos-delay="500">
+                    <div class="flex items-center justify-between mb-2">
+                        <div class="flex items-center space-x-4 transform hover:scale-110 duration-200">
+                            <img src="images/dart.svg" alt="" class="w-9 h-9" />
+                            <span class="font-semibold text-lg">Dart</span>
+                        </div>
+                        <span class="text-sm text-gray-300">75%</span>
+                    </div>
+                    <div class="w-full bg-gray-600 rounded-full h-3 overflow-hidden">
+                        <div class="bg-gradient-to-r from-yellow-400 to-yellow-500 h-full rounded-full transition-all duration-1000 ease-out hover:from-yellow-300 hover:to-yellow-400"
+                            style="width: 75%"></div>
+                    </div>
+                </div>
+                <div class="p-4 bg-gray-700 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
+                    data-aos="fade-right" data-aos-delay="700">
+                    <div class="flex items-center justify-between mb-2">
+                        <div class="flex items-center space-x-4 transform hover:scale-110 duration-200">
+                            <img src="images/tail.svg" alt="" class="w-9 h-9" />
+                            <span class="font-semibold text-lg">Tailwindcss</span>
+                        </div>
+                        <span class="text-sm text-gray-300">90%</span>
+                    </div>
+                    <div class="w-full bg-gray-600 rounded-full h-3 overflow-hidden">
+                        <div class="bg-gradient-to-r from-yellow-400 to-yellow-500 h-full rounded-full transition-all duration-1000 ease-out hover:from-yellow-300 hover:to-yellow-400"
+                            style="width: 90%"></div>
+                    </div>
+                </div>
+                <div class="p-4 bg-gray-700 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
+                    data-aos="fade-right" data-aos-delay="700">
+                    <div class="flex items-center justify-between mb-2">
+                        <div class="flex items-center space-x-4 transform hover:scale-110 duration-200">
+                            <i class="fas fa-pencil-ruler text-4xl text-pink-400"></i>
+                            <span class="font-semibold text-lg">UI/UX Design</span>
+                        </div>
+                        <span class="text-sm text-gray-300">85%</span>
+                    </div>
+                    <div class="w-full bg-gray-600 rounded-full h-3 overflow-hidden">
+                        <div class="bg-gradient-to-r from-yellow-400 to-yellow-500 h-full rounded-full transition-all duration-1000 ease-out hover:from-yellow-300 hover:to-yellow-400"
+                            style="width: 85%"></div>
+                    </div>
+                </div>
+                <div class="p-4 bg-gray-700 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
+                    data-aos="fade-right" data-aos-delay="800">
+                    <div class="flex items-center justify-between mb-2">
+                        <div class="flex items-center space-x-4 transform hover:scale-110 duration-200">
+                            <img src="images/flutter.svg" alt="" class="w-9 h-9" />
+                            <span class="font-semibold text-lg">Flutter</span>
+                        </div>
+                        <span class="text-sm text-gray-300">80%</span>
+                    </div>
+                    <div class="w-full bg-gray-600 rounded-full h-3 overflow-hidden">
+                        <div class="bg-gradient-to-r from-yellow-400 to-yellow-500 h-full rounded-full transition-all duration-1000 ease-out hover:from-yellow-300 hover:to-yellow-400"
+                            style="width: 80%"></div>
+                    </div>
+                </div>
+                <div class="p-4 bg-gray-700 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
+                    data-aos="fade-right" data-aos-delay="500">
+                    <div class="flex items-center justify-between mb-2">
+                        <div class="flex items-center space-x-4 transform hover:scale-110 duration-200">
+                            <img src="images/python.svg" alt="" class="w-9 h-9" />
+                            <span class="font-semibold text-lg">Python</span>
+                        </div>
+                        <span class="text-sm text-gray-300">70%</span>
+                    </div>
+                    <div class="w-full bg-gray-600 rounded-full h-3 overflow-hidden">
+                        <div class="bg-gradient-to-r from-yellow-400 to-yellow-500 h-full rounded-full transition-all duration-1000 ease-out hover:from-yellow-300 hover:to-yellow-400"
+                            style="width: 70%"></div>
+                    </div>
+                </div>
             </div>
-            <div class="w-full bg-gray-600 rounded-full h-3 overflow-hidden">
-              <div
-                class="bg-gradient-to-r from-yellow-400 to-yellow-500 h-full rounded-full transition-all duration-1000 ease-out hover:from-yellow-300 hover:to-yellow-400"
-                style="width: 90%"
-              ></div>
-            </div>
-          </div>
-          <div
-            class="p-4 bg-gray-700 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
-            data-aos="fade-right"
-            data-aos-delay="100"
-          >
-            <div class="flex items-center justify-between mb-2">
-              <div
-                class="flex items-center space-x-4 transform hover:scale-105 duration-200"
-              >
-                <i class="fab fa-php text-4xl text-indigo-400"></i>
-                <span class="font-semibold text-lg">PHP</span>
-              </div>
-              <span class="text-sm text-gray-300">90%</span>
-            </div>
-            <div class="w-full bg-gray-600 rounded-full h-3 overflow-hidden">
-              <div
-                class="bg-gradient-to-r from-yellow-400 to-yellow-500 h-full rounded-full transition-all duration-1000 ease-out hover:from-yellow-300 hover:to-yellow-400"
-                style="width: 90%"
-              ></div>
-            </div>
-          </div>
-          <div
-            class="p-4 bg-gray-700 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
-            data-aos="fade-right"
-            data-aos-delay="200"
-          >
-            <div class="flex items-center justify-between mb-2">
-              <div
-                class="flex items-center space-x-4 transform hover:scale-105 duration-200"
-              >
-                <i class="fab fa-laravel text-4xl text-red-500"></i>
-                <span class="font-semibold text-lg">Laravel</span>
-              </div>
-              <span class="text-sm text-gray-300">80%</span>
-            </div>
-            <div class="w-full bg-gray-600 rounded-full h-3 overflow-hidden">
-              <div
-                class="bg-gradient-to-r from-yellow-400 to-yellow-500 h-full rounded-full transition-all duration-1000 ease-out hover:from-yellow-300 hover:to-yellow-400"
-                style="width: 80%"
-              ></div>
-            </div>
-          </div>
-          <div
-            class="p-4 bg-gray-700 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
-            data-aos="fade-right"
-            data-aos-delay="300"
-          >
-            <div class="flex items-center justify-between mb-2">
-              <div
-                class="flex items-center space-x-4 transform hover:scale-105 duration-200"
-              >
-                <i class="fab fa-js text-4xl text-yellow-300"></i>
-                <span class="font-semibold text-lg">JavaScript</span>
-              </div>
-              <span class="text-sm text-gray-300">50%</span>
-            </div>
-            <div class="w-full bg-gray-600 rounded-full h-3 overflow-hidden">
-              <div
-                class="bg-gradient-to-r from-yellow-400 to-yellow-500 h-full rounded-full transition-all duration-1000 ease-out hover:from-yellow-300 hover:to-yellow-400"
-                style="width: 50%"
-              ></div>
-            </div>
-          </div>
-          <div
-            class="p-4 bg-gray-700 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
-            data-aos="fade-right"
-            data-aos-delay="400"
-          >
-            <div class="flex items-center justify-between mb-2">
-              <div
-                class="flex items-center space-x-4 transform hover:scale-105 duration-200"
-              >
-                <i class="fab fa-css3-alt text-4xl text-blue-400"></i>
-                <span class="font-semibold text-lg">CSS</span>
-              </div>
-              <span class="text-sm text-gray-300">70%</span>
-            </div>
-            <div class="w-full bg-gray-600 rounded-full h-3 overflow-hidden">
-              <div
-                class="bg-gradient-to-r from-yellow-400 to-yellow-500 h-full rounded-full transition-all duration-1000 ease-out hover:from-yellow-300 hover:to-yellow-400"
-                style="width: 70%"
-              ></div>
-            </div>
-          </div>
-          <div
-            class="p-4 bg-gray-700 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
-            data-aos="fade-right"
-            data-aos-delay="500"
-          >
-            <div class="flex items-center justify-between mb-2">
-              <div
-                class="flex items-center space-x-4 transform hover:scale-105 duration-200"
-              >
-                <img src="images/dart.svg" alt="" class="w-9 h-9" />
-                <span class="font-semibold text-lg">Dart</span>
-              </div>
-              <span class="text-sm text-gray-300">75%</span>
-            </div>
-            <div class="w-full bg-gray-600 rounded-full h-3 overflow-hidden">
-              <div
-                class="bg-gradient-to-r from-yellow-400 to-yellow-500 h-full rounded-full transition-all duration-1000 ease-out hover:from-yellow-300 hover:to-yellow-400"
-                style="width: 75%"
-              ></div>
-            </div>
-          </div>
-          <div
-            class="p-4 bg-gray-700 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
-            data-aos="fade-right"
-            data-aos-delay="700"
-          >
-            <div class="flex items-center justify-between mb-2">
-              <div
-                class="flex items-center space-x-4 transform hover:scale-105 duration-200"
-              >
-                <img src="images/tail.svg" alt="" class="w-9 h-9" />
-                <span class="font-semibold text-lg">Tailwindcss</span>
-              </div>
-              <span class="text-sm text-gray-300">90%</span>
-            </div>
-            <div class="w-full bg-gray-600 rounded-full h-3 overflow-hidden">
-              <div
-                class="bg-gradient-to-r from-yellow-400 to-yellow-500 h-full rounded-full transition-all duration-1000 ease-out hover:from-yellow-300 hover:to-yellow-400"
-                style="width: 90%"
-              ></div>
-            </div>
-          </div>
-          <div
-            class="p-4 bg-gray-700 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
-            data-aos="fade-right"
-            data-aos-delay="700"
-          >
-            <div class="flex items-center justify-between mb-2">
-              <div
-                class="flex items-center space-x-4 transform hover:scale-105 duration-200"
-              >
-                <i class="fas fa-pencil-ruler text-4xl text-pink-400"></i>
-                <span class="font-semibold text-lg">UI/UX Design</span>
-              </div>
-              <span class="text-sm text-gray-300">85%</span>
-            </div>
-            <div class="w-full bg-gray-600 rounded-full h-3 overflow-hidden">
-              <div
-                class="bg-gradient-to-r from-yellow-400 to-yellow-500 h-full rounded-full transition-all duration-1000 ease-out hover:from-yellow-300 hover:to-yellow-400"
-                style="width: 85%"
-              ></div>
-            </div>
-          </div>
-          <div
-            class="p-4 bg-gray-700 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
-            data-aos="fade-right"
-            data-aos-delay="800"
-          >
-            <div class="flex items-center justify-between mb-2">
-              <div
-                class="flex items-center space-x-4 transform hover:scale-105 duration-200"
-              >
-                <img src="images/flutter.svg" alt="" class="w-9 h-9" />
-                <span class="font-semibold text-lg">Flutter</span>
-              </div>
-              <span class="text-sm text-gray-300">80%</span>
-            </div>
-            <div class="w-full bg-gray-600 rounded-full h-3 overflow-hidden">
-              <div
-                class="bg-gradient-to-r from-yellow-400 to-yellow-500 h-full rounded-full transition-all duration-1000 ease-out hover:from-yellow-300 hover:to-yellow-400"
-                style="width: 80%"
-              ></div>
-            </div>
-          </div>
-          <div
-            class="p-4 bg-gray-700 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
-            data-aos="fade-right"
-            data-aos-delay="500"
-          >
-            <div class="flex items-center justify-between mb-2">
-              <div
-                class="flex items-center space-x-4 transform hover:scale-105 duration-200"
-              >
-                <img src="images/python.svg" alt="" class="w-9 h-9" />
-                <span class="font-semibold text-lg">Python</span>
-              </div>
-              <span class="text-sm text-gray-300">70%</span>
-            </div>
-            <div class="w-full bg-gray-600 rounded-full h-3 overflow-hidden">
-              <div
-                class="bg-gradient-to-r from-yellow-400 to-yellow-500 h-full rounded-full transition-all duration-1000 ease-out hover:from-yellow-300 hover:to-yellow-400"
-                style="width: 70%"
-              ></div>
-            </div>
-          </div>
         </div>
-      </div>
     </section>
 
     <section id="projects" class="py-16 px-6 bg-gray-900" data-aos="fade-up">
-      <div class="container mx-auto">
-        <h2 class="text-3xl font-bold text-center mb-10 text-yellow-400">
-          My Projects
-        </h2>
-        <div class="grid md:grid-cols-3 gap-6">
-          <button
-            type="button"
-            class="project-card block bg-gray-800 rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-2xl"
-            data-aos="zoom-in"
-            data-video="https://www.youtube.com/embed/2lAe1cqCOXo"
-          >
-            <div class="relative overflow-hidden">
-              <img
-                src="images/project1.jpg"
-                alt="Project 1"
-                class="w-full h-48 object-cover transform transition duration-500 hover:scale-110"
-              />
-              <div
-                class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 hover:opacity-100 transition-opacity duration-300"
-              >
-                <i class="fas fa-play-circle text-white text-4xl"></i>
-              </div>
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-10 text-yellow-400">
+                My Projects
+            </h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                <button type="button"
+                    class="project-card block bg-gray-800 rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-2xl"
+                    data-aos="zoom-in" data-video="images/MyCanteen.mp4">
+                    <div class="relative overflow-hidden">
+                        <img src="images/project1.jpg" alt="Project 1"
+                            class="w-full h-48 object-cover transform transition duration-500 hover:scale-110" />
+                        <div
+                            class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 hover:opacity-100 transition-opacity duration-300">
+                            <i class="fas fa-play-circle text-white text-4xl"></i>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-yellow-400 text-xl font-bold mb-2">
+                            MyCanteen Website
+                        </h3>
+                        <p class="text-gray-300">
+                            MyCanteen is an online canteen food ordering website that makes
+                            it easy for users to view menus, order food, and make payments
+                            without having to queue at the canteen.
+                        </p>
+                    </div>
+                </button>
+                <button type="button"
+                    class="project-card block bg-gray-800 rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-2xl"
+                    data-aos="zoom-in" data-aos-delay="100" data-video="images/project2.mp4">
+                    <div class="relative overflow-hidden">
+                        <img src="images/project2.jpg" alt="Project 2"
+                            class="w-full h-48 object-cover transform transition duration-500 hover:scale-110" />
+                        <div
+                            class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 hover:opacity-100 transition-opacity duration-300">
+                            <i class="fas fa-play-circle text-white text-4xl"></i>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-yellow-400 text-xl font-bold mb-2">
+                            TubyGames Website
+                        </h3>
+                        <p class="text-gray-300">
+                            This website is a digital game marketplace inspired by Steam,
+                            designed to showcase and sell various video games online. It
+                            features a login, profile, and payment gateway, using native
+                            PHP.
+                        </p>
+                    </div>
+                </button>
+                <button type="button"
+                    class="project-card block bg-gray-800 rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-2xl"
+                    data-aos="zoom-in" data-aos-delay="200" data-video="images/weatherapps.mp4">
+                    <div class="relative overflow-hidden">
+                        <img src="images/weather.jpg" alt="Project 3"
+                            class="w-full h-48 object-cover transform transition duration-500 hover:scale-110" />
+                        <div
+                            class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 hover:opacity-100 transition-opacity duration-300">
+                            <i class="fas fa-play-circle text-white text-4xl"></i>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-yellow-400 text-xl font-bold mb-2">
+                            Weather Apps
+                        </h3>
+                        <p class="text-gray-300">
+                            This project is an application about weather notifications
+                            around the world with adequate features for those of us who want
+                            to know the weather in our area or around the world.
+                        </p>
+                    </div>
+                </button>
             </div>
-            <div class="p-4">
-              <h3 class="text-yellow-400 text-xl font-bold mb-2">
-                MyCanteen Website
-              </h3>
-              <p class="text-gray-300">
-                MyCanteen is an online canteen food ordering website that makes
-                it easy for users to view menus, order food, and make payments
-                without having to queue at the canteen.
-              </p>
-            </div>
-          </button>
-          <button
-            type="button"
-            class="project-card block bg-gray-800 rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-2xl"
-            data-aos="zoom-in"
-            data-aos-delay="100"
-            data-video="https://www.youtube.com/embed/dQw4w9WgXcQ"
-          >
-            <div class="relative overflow-hidden">
-              <img
-                src="images/project2.jpg"
-                alt="Project 2"
-                class="w-full h-48 object-cover transform transition duration-500 hover:scale-110"
-              />
-              <div
-                class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 hover:opacity-100 transition-opacity duration-300"
-              >
-                <i class="fas fa-play-circle text-white text-4xl"></i>
-              </div>
-            </div>
-            <div class="p-4">
-              <h3 class="text-yellow-400 text-xl font-bold mb-2">
-                TubyGames Website
-              </h3>
-              <p class="text-gray-300">
-                This website is a digital game marketplace inspired by Steam,
-                designed to showcase and sell various video games online.
-              </p>
-            </div>
-          </button>
-          <button
-            type="button"
-            class="project-card block bg-gray-800 rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-2xl"
-            data-aos="zoom-in"
-            data-aos-delay="200"
-            data-video="https://www.youtube.com/embed/5qap5aO4i9A"
-          >
-            <div class="relative overflow-hidden">
-              <img
-                src="images/project3.jpg"
-                alt="Project 3"
-                class="w-full h-48 object-cover transform transition duration-500 hover:scale-110"
-              />
-              <div
-                class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 hover:opacity-100 transition-opacity duration-300"
-              >
-                <i class="fas fa-play-circle text-white text-4xl"></i>
-              </div>
-            </div>
-            <div class="p-4">
-              <h3 class="text-yellow-400 text-xl font-bold mb-2">Kalkulator</h3>
-              <p class="text-gray-300">
-                This project is a simple calculator application designed to
-                perform basic arithmetic operations.
-              </p>
-            </div>
-          </button>
         </div>
-      </div>
-      <!-- Modal Popup -->
-      <div
-        id="project-modal"
-        class="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50 hidden"
-      >
-        <div
-          class="bg-gray-900 rounded-lg shadow-2xl max-w-2xl w-full relative p-6 mx-4 md:mx-0"
-        >
-          <button
-            id="close-modal"
-            class="absolute top-2 right-2 text-gray-300 hover:text-yellow-400 text-2xl"
-          >
-            &times;
-          </button>
-          <div class="aspect-w-16 aspect-h-9">
-            <iframe
-              id="project-video"
-              src=""
-              frameborder="0"
-              allowfullscreen
-              class="w-full h-64 md:h-96 rounded-lg"
-            ></iframe>
-          </div>
+        <!-- Modal Popup -->
+        <div id="project-modal"
+            class="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50 opacity-0"
+            style="display: none; transition: opacity 0.5s ease">
+            <div
+                class="bg-gray-900 rounded-lg shadow-2xl max-w-2xl w-full relative p-6 mx-4 md:mx-0 transform scale-95 transition-transform duration-300">
+                <button id="close-modal" class="absolute top-2 right-2 text-gray-300 hover:text-yellow-400 text-2xl">
+                    &times;
+                </button>
+                <div class="aspect-w-16 aspect-h-9">
+                    <video id="project-video" src="" controls autoplay muted
+                        class="w-full h-64 md:h-96 rounded-lg"></video>
+                </div>
+            </div>
         </div>
-      </div>
     </section>
 
     <section id="contact" class="py-16 bg-gray-800 px-6" data-aos="fade-up">
-      <div class="container mx-auto text-center">
-        <h2 class="text-3xl font-bold mb-6 text-yellow-400">Contact Me</h2>
-        <div class="flex flex-col items-center space-y-6">
-          <div class="flex flex-wrap justify-center gap-6">
-            <a
-              href="https://github.com/lki-by"
-              target="_blank"
-              class="flex items-center space-x-2 bg-gray-900 px-5 py-3 rounded-full shadow-lg hover:bg-yellow-400 hover:text-black transition duration-300"
-            >
-              <i class="fab fa-github text-2xl"></i>
-              <span class="font-semibold">GitHub</span>
-            </a>
-            <a
-              href="https://medium.com/@albynizam33"
-              target="_blank"
-              class="flex items-center space-x-2 bg-gray-900 px-5 py-3 rounded-full shadow-lg hover:bg-yellow-400 hover:text-black transition duration-300"
-            >
-              <i class="fab fa-medium text-2xl"></i>
-              <span class="font-semibold">Medium</span>
-            </a>
-            <a
-              href="https://www.linkedin.com/in/alby-nizam-57a9b6380/"
-              target="_blank"
-              class="flex items-center space-x-2 bg-gray-900 px-5 py-3 rounded-full shadow-lg hover:bg-yellow-400 hover:text-black transition duration-300"
-            >
-              <i class="fab fa-linkedin text-2xl"></i>
-              <span class="font-semibold">LinkedIn</span>
-            </a>
-            <a
-              href="https://www.instagram.com/allnzmp_/"
-              target="_blank"
-              class="flex items-center space-x-2 bg-gray-900 px-5 py-3 rounded-full shadow-lg hover:bg-yellow-400 hover:text-black transition duration-300"
-            >
-              <i class="fab fa-instagram text-2xl"></i>
-              <span class="font-semibold">Instagram</span>
-            </a>
-            <a
-              href="https://wa.me/6285838239904"
-              target="_blank"
-              class="flex items-center space-x-2 bg-gray-900 px-5 py-3 rounded-full shadow-lg hover:bg-yellow-400 hover:text-black transition duration-300"
-            >
-              <i class="fab fa-whatsapp text-2xl"></i>
-              <span class="font-semibold">WhatsApp</span>
-            </a>
-            <a
-              href="mailto:albynizam33@gmail.com"
-              target="_blank"
-              class="flex items-center space-x-2 bg-gray-900 px-5 py-3 rounded-full shadow-lg hover:bg-yellow-400 hover:text-black transition duration-300"
-            >
-              <i class="fas fa-envelope text-2xl"></i>
-              <span class="font-semibold">Email</span>
-            </a>
-          </div>
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-6 text-yellow-400">Contact Me</h2>
+            <div class="flex flex-col items-center space-y-6">
+                <div class="flex flex-wrap justify-center gap-6">
+                    <a href="https://github.com/lki-by" target="_blank"
+                        class="flex items-center space-x-2 bg-gray-900 px-5 py-3 rounded-full shadow-lg hover:bg-yellow-400 hover:text-black transition duration-300">
+                        <i class="fab fa-github text-2xl"></i>
+                        <span class="font-semibold">GitHub</span>
+                    </a>
+                    <a href="https://medium.com/@albynizam33" target="_blank"
+                        class="flex items-center space-x-2 bg-gray-900 px-5 py-3 rounded-full shadow-lg hover:bg-yellow-400 hover:text-black transition duration-300">
+                        <i class="fab fa-medium text-2xl"></i>
+                        <span class="font-semibold">Medium</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/alby-nizam-57a9b6380/" target="_blank"
+                        class="flex items-center space-x-2 bg-gray-900 px-5 py-3 rounded-full shadow-lg hover:bg-yellow-400 hover:text-black transition duration-300">
+                        <i class="fab fa-linkedin text-2xl"></i>
+                        <span class="font-semibold">LinkedIn</span>
+                    </a>
+                    <a href="https://www.instagram.com/allnzmp_/" target="_blank"
+                        class="flex items-center space-x-2 bg-gray-900 px-5 py-3 rounded-full shadow-lg hover:bg-yellow-400 hover:text-black transition duration-300">
+                        <i class="fab fa-instagram text-2xl"></i>
+                        <span class="font-semibold">Instagram</span>
+                    </a>
+                    <a href="https://wa.me/6285838239904" target="_blank"
+                        class="flex items-center space-x-2 bg-gray-900 px-5 py-3 rounded-full shadow-lg hover:bg-yellow-400 hover:text-black transition duration-300">
+                        <i class="fab fa-whatsapp text-2xl"></i>
+                        <span class="font-semibold">WhatsApp</span>
+                    </a>
+                    <a href="mailto:albynizam33@gmail.com" target="_blank"
+                        class="flex items-center space-x-2 bg-gray-900 px-5 py-3 rounded-full shadow-lg hover:bg-yellow-400 hover:text-black transition duration-300">
+                        <i class="fas fa-envelope text-2xl"></i>
+                        <span class="font-semibold">Email</span>
+                    </a>
+                </div>
+            </div>
         </div>
-      </div>
     </section>
 
-    <div
-      id="back-to-top"
-      class="fixed bottom-8 right-8 bg-yellow-400 text-black p-3 rounded-full shadow-lg cursor-pointer hidden z-50 transition duration-300 hover:scale-110"
-    >
-      <i class="fas fa-arrow-up"></i>
+    <div id="back-to-top"
+        class="fixed bottom-8 right-8 bg-yellow-400 text-black p-3 rounded-full shadow-lg cursor-pointer hidden z-50 transition duration-300 hover:scale-110">
+        <i class="fas fa-arrow-up"></i>
     </div>
 
     <footer class="bg-gray-900 text-center py-4 text-gray-400">
-      &copy; Alby Nizam. All rights reserved.
+        &copy; Alby Nizam. All rights reserved.
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-      AOS.init({ duration: 1000, once: true });
-      window.addEventListener("load", () => {
-        document.getElementById("preloader").style.display = "none";
-      });
-      const menuBtn = document.getElementById("menu-btn");
-      const menu = document.getElementById("menu");
-      menuBtn.addEventListener("click", () => {
-        menu.classList.toggle("hidden");
-      });
-
-      // Modal Project Video
-      const projectCards = document.querySelectorAll(".project-card");
-      const modal = document.getElementById("project-modal");
-      const closeModal = document.getElementById("close-modal");
-      const projectVideo = document.getElementById("project-video");
-
-      projectCards.forEach((card) => {
-        card.addEventListener("click", () => {
-          const videoUrl = card.getAttribute("data-video");
-          projectVideo.src = videoUrl + "?autoplay=1";
-          modal.classList.remove("hidden");
+        AOS.init({
+            duration: 1000,
+            once: true,
         });
-      });
+        window.addEventListener("load", () => {
+            document.getElementById("preloader").style.display = "none";
+        });
+        const menuBtn = document.getElementById("menu-btn");
+        const menu = document.getElementById("menu");
+        menuBtn.addEventListener("click", () => {
+            menu.classList.toggle("hidden");
+        });
+        window.addEventListener("resize", () => {
+            if (window.innerWidth >= 768) {
+                menu.classList.add("hidden");
+            }
+        });
+        const projectCards = document.querySelectorAll(".project-card");
+        const modal = document.getElementById("project-modal");
+        const closeModal = document.getElementById("close-modal");
+        const projectVideo = document.getElementById("project-video");
 
-      closeModal.addEventListener("click", () => {
-        modal.classList.add("hidden");
-        projectVideo.src = "";
-      });
+        projectCards.forEach((card) => {
+            card.addEventListener("click", () => {
+                const videoUrl = card.getAttribute("data-video");
+                projectVideo.src = videoUrl;
+                modal.style.display = "flex";
+                setTimeout(() => (modal.style.opacity = "1"), 10);
+            });
+        });
 
-      // Close modal on outside click
-      modal.addEventListener("click", (e) => {
-        if (e.target === modal) {
-          modal.classList.add("hidden");
-          projectVideo.src = "";
-        }
-      });
+        closeModal.addEventListener("click", () => {
+            modal.style.opacity = "0";
+            setTimeout(() => (modal.style.display = "none"), 500);
+            projectVideo.src = "";
+        });
 
-      // Typing animation for role
-      const roles = [
-        "Full Stack Developer",
-        "UI/UX Enthusiast",
-        "Web & Apps Creator",
-      ];
-      let roleIndex = 0,
-        charIndex = 0,
-        typing = true;
-      const typingRole = document.getElementById("typing-role");
-      const cursor = document.querySelector(".blinking-cursor");
-      cursor.innerHTML = "|";
-      function typeRole() {
-        if (typing) {
-          if (charIndex < roles[roleIndex].length) {
-            typingRole.textContent += roles[roleIndex][charIndex];
-            charIndex++;
-            setTimeout(typeRole, 80);
-          } else {
-            typing = false;
-            setTimeout(() => {
-              typing = true;
-              setTimeout(eraseRole, 1200);
-            }, 800);
-          }
-        }
-      }
-      function eraseRole() {
-        if (!typing) {
-          if (charIndex > 0) {
-            typingRole.textContent = roles[roleIndex].substring(
-              0,
-              charIndex - 1
-            );
-            charIndex--;
-            setTimeout(eraseRole, 40);
-          } else {
-            roleIndex = (roleIndex + 1) % roles.length;
+        // Close modal on outside click
+        modal.addEventListener("click", (e) => {
+            if (e.target === modal) {
+                modal.style.opacity = "0";
+                setTimeout(() => (modal.style.display = "none"), 500);
+                projectVideo.src = "";
+            }
+        });
+        let roles = [
+            "Full Stack Developer",
+            "UI/UX Enthusiast",
+            "Web & Apps Creator",
+        ];
+        let roleIndex = 0,
+            charIndex = 0,
             typing = true;
-            setTimeout(typeRole, 300);
-          }
+        const typingRole = document.getElementById("typing-role");
+        const cursor = document.querySelector(".blinking-cursor");
+        cursor.innerHTML = "|";
+
+        function typeRole() {
+            if (typing) {
+                if (charIndex < roles[roleIndex].length) {
+                    typingRole.textContent += roles[roleIndex][charIndex];
+                    charIndex++;
+                    setTimeout(typeRole, 80);
+                } else {
+                    typing = false;
+                    setTimeout(() => {
+                        typing = true;
+                        setTimeout(eraseRole, 1200);
+                    }, 800);
+                }
+            }
         }
-      }
-      typeRole();
 
-      // Ripple effect for buttons
-      document.querySelectorAll(".ripple").forEach((btn) => {
-        btn.addEventListener("click", function (e) {
-          const circle = document.createElement("span");
-          circle.className =
-            "absolute bg-yellow-400 opacity-30 rounded-full pointer-events-none";
-          const rect = btn.getBoundingClientRect();
-          circle.style.width = circle.style.height =
-            Math.max(rect.width, rect.height) + "px";
-          circle.style.left = e.clientX - rect.left - rect.width / 2 + "px";
-          circle.style.top = e.clientY - rect.top - rect.height / 2 + "px";
-          btn.appendChild(circle);
-          setTimeout(() => circle.remove(), 600);
-        });
-        btn.classList.add("relative", "overflow-hidden");
-      });
-
-      // Floating avatar effect
-      const avatar = document.getElementById("avatar-home");
-      if (avatar) {
-        document.addEventListener("mousemove", (e) => {
-          const x = (e.clientX / window.innerWidth - 0.5) * 10;
-          const y = (e.clientY / window.innerHeight - 0.5) * 10;
-          avatar.style.transform = `scale(1.08) translate(${x}px, ${y}px)`;
-        });
-        avatar.addEventListener("mouseleave", () => {
-          avatar.style.transform = "scale(1) translate(0,0)";
-        });
-      }
-
-      // Progress bar
-      window.addEventListener("scroll", () => {
-        const scrollTop = window.scrollY;
-        const docHeight = document.body.scrollHeight - window.innerHeight;
-        const scrollPercent = (scrollTop / docHeight) * 100;
-        document.getElementById("progress-bar").style.width =
-          scrollPercent + "%";
-      });
-
-      // Back to top
-      const backToTop = document.getElementById("back-to-top");
-      window.addEventListener("scroll", () => {
-        if (window.scrollY > 300) {
-          backToTop.classList.remove("hidden");
-        } else {
-          backToTop.classList.add("hidden");
+        function eraseRole() {
+            if (!typing) {
+                if (charIndex > 0) {
+                    typingRole.textContent = roles[roleIndex].substring(
+                        0,
+                        charIndex - 1
+                    );
+                    charIndex--;
+                    setTimeout(eraseRole, 40);
+                } else {
+                    roleIndex = (roleIndex + 1) % roles.length;
+                    typing = true;
+                    setTimeout(typeRole, 300);
+                }
+            }
         }
-      });
-      backToTop.addEventListener("click", () => {
-        window.scrollTo({ top: 0, behavior: "smooth" });
-      });
+        typeRole();
+
+        // Ripple effect for buttons
+        document.querySelectorAll(".ripple").forEach((btn) => {
+            btn.addEventListener("click", function(e) {
+                const circle = document.createElement("span");
+                circle.className =
+                    "absolute bg-yellow-400 opacity-30 rounded-full pointer-events-none";
+                const rect = btn.getBoundingClientRect();
+                circle.style.width = circle.style.height =
+                    Math.max(rect.width, rect.height) + "px";
+                circle.style.left = e.clientX - rect.left - rect.width / 2 + "px";
+                circle.style.top = e.clientY - rect.top - rect.height / 2 + "px";
+                btn.appendChild(circle);
+                setTimeout(() => circle.remove(), 600);
+            });
+            btn.classList.add("relative", "overflow-hidden");
+        });
+
+        // Floating avatar effect
+        const avatar = document.getElementById("avatar-home");
+        if (avatar) {
+            document.addEventListener("mousemove", (e) => {
+                const x = (e.clientX / window.innerWidth - 0.5) * 10;
+                const y = (e.clientY / window.innerHeight - 0.5) * 10;
+                avatar.style.transform = `scale(1.08) translate(${x}px, ${y}px)`;
+            });
+            avatar.addEventListener("mouseleave", () => {
+                avatar.style.transform = "scale(1) translate(0,0)";
+            });
+        }
+
+        // Progress bar
+        window.addEventListener("scroll", () => {
+            const scrollTop = window.scrollY;
+            const docHeight = document.body.scrollHeight - window.innerHeight;
+            const scrollPercent = (scrollTop / docHeight) * 100;
+            document.getElementById("progress-bar").style.width =
+                scrollPercent + "%";
+        });
+
+        // Back to top
+        const backToTop = document.getElementById("back-to-top");
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 300) {
+                backToTop.classList.remove("hidden");
+            } else {
+                backToTop.classList.add("hidden");
+            }
+        });
+        backToTop.addEventListener("click", () => {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth",
+            });
+        });
     </script>
-  </body>
+</body>
+
 </html>
